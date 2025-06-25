@@ -39,7 +39,7 @@ def main():
             model="llama3.1",
             messages=st.session_state.messages
         )
-        assistant_reply = response.message.content
+        assistant_reply = response["message"]["content"]
     except Exception as e:
         assistant_reply = f"Error: {e}"
 
